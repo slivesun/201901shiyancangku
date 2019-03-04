@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>气泡案例</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+        }
+        ul,ol{
+            list-style: none;
+        }
+        html,body,.wrapper{
+            height: 100%;
+        }
+        body{
+            /* 渐变色 */
+            background:linear-gradient(red,#53E3A6)
+        }
+        .wrapper{
+            position: relative;
+            overflow: hidden;
+        }
+        .wrapper>li{
+            width:60px;
+            height:60px;
+            background: rgba(255,255,255,.3);
+            position:absolute;
+            left:0;
+            bottom:-300px;
+            border-radius: 50%;
+            animation: run 5s linear infinite;
+        }
+        .wrapper>li:nth-child(1){
+            left:100px;
+            width:100px;
+            height:100px;
+        }
+        .wrapper>li:nth-child(2){
+            left:80px;
+            width:60px;
+            height:60px;
+            /* 动画延迟 */
+            animation-delay: 1s;
+            /* 动画总执行时间 */
+            animation-duration: 6s;
+        }
+        .wrapper>li:nth-child(3){
+            left:16%;
+            width:70px;
+            height:70px;
+            animation-delay: 2s;
+            /* 动画总执行时间 */
+            animation-duration:7s;
+        }
+        .wrapper>li:nth-child(4){
+            left:67%;
+            width:150px;
+            height:150px;
+            animation-delay: 3s;
+            /* 动画总执行时间 */
+            animation-duration: 6s;
+        }
+        .wrapper>li:nth-child(5){
+            left:74%;
+            width:200px;
+            height:200px;
+            animation-delay: 4s;
+            /* 动画总执行时间 */
+            animation-duration:8s;
+        }
+        .wrapper>li:nth-child(6){
+            left:96%;
+            width:170px;
+            height:170px;
+            animation-delay: 3s;
+            /* 动画总执行时间 */
+            animation-duration:4s;
+        }
+        .wrapper>li:nth-child(7){
+            left:69%;
+            width:40px;
+            height:40px;
+            animation-delay:5s;
+            /* 动画总执行时间 */
+            animation-duration: 7s;
+        }
+        .wrapper>li:nth-child(8){
+            left:56%;
+            width:82px;
+            height:82px;
+            animation-delay: 1s;
+            /* 动画总执行时间 */
+            animation-duration: 6s;
+        }
+        .wrapper>li:nth-child(9){
+            left:54%;
+            animation-delay: 2s;
+            /* 动画总执行时间 */
+            animation-duration:8s;
+        }
+        .wrapper>li:nth-child(10){
+            left:60%;
+            animation-delay: 1s;
+            /* 动画总执行时间 */
+            animation-duration: 6s;
+        }
+
+        @keyframes run {
+            0%{
+                opacity: 0.2;
+                transform: translateY(0)
+            }
+            25%{
+                opacity: 0.3;
+                transform: translateY(-200px)
+            }
+            50%{
+                opacity: 0.5;
+                transform: translateY(-400px)
+            }
+            75%{
+                opacity: 1;
+                transform: translateY(-600px)
+            }
+            100%{
+                opacity:0;
+                transform: translate(-800px)
+            }
+
+        }
+        @-webkit-keyframes run {
+            0%{
+                opacity: 0.2;
+                transform: translateY(0)
+            }
+            25%{
+                opacity: 0.3;
+                transform: translateY(-200px)
+            }
+            50%{
+                opacity: 0.5;
+                transform: translateY(-400px)
+            }
+            75%{
+                opacity: 1;
+                transform: translateY(-600px)
+            }
+            100%{
+                opacity:0;
+                transform: translate(-800px)
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+    <ul class="wrapper">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+</html>

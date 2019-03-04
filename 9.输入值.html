@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            border: 1px solid #ee0099;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var text = document.getElementById('text')
+            var value = document.getElementById('value')
+            var btn = document.getElementById('btn')
+            var box = document.getElementById('box')
+
+            //JS中允许“.” 替换成“[]” 
+            btn['onclick'] = function () {
+
+                //    如果用js想改变一个属性值，而且这个属性值是一个变量的话，那么久无法通过‘·’实现，比如说oDiv.style.oAttr.value]这个例子来说，本身oDiv.style就是寻找div中的style，那么后面再接上oAttr.value，那就无法知道最后的值到底是什么。所以，在这个例子中就需要再寻找一种方法：用'[]'替换刚才用到的'·'
+                box.style[text.value] = value.value;
+
+                //清空输入框的值
+                text.value = '';
+                value.value = '';
+            }
+            console.log(text)
+        }
+
+    </script>
+</head>
+
+<body>
+    请输入属性名称: <input id="text" type="text" />
+    请输入属性值: <input id='value' type='text' />
+    <input id="btn" type="button" value="确定" />
+    <div id="box"></div>
+</body>
+
+</html>

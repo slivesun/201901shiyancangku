@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>气泡</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+        }
+        body{
+            background-color:green;
+        }
+        .box{
+            width:100px;
+            height:100px;
+            background-color: rgba(255,255,255,0.3);
+            animation: run 2s linear 1s infinite;
+        }
+        ul,ol{
+            list-style: none;
+        }
+
+        @keyframes run{
+            0%{
+                transform: translateX(0);
+            }
+            100%{
+                transform: translateX(800px);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class= "box"></div>
+    <ul>
+        <li>上班</li>
+        <li>吃饭</li>
+        <li>打豆豆</li>
+    </ul>
+    <ol>
+        <li>上班</li>
+        <li>吃饭</li>
+        <li>打豆豆</li>
+    </ol>
+</body>
+</html>
